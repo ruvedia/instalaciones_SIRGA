@@ -1,0 +1,157 @@
+---
+import { Image } from 'astro:assets';
+import client1 from '../assets/images/clientes_1.png';
+import client2 from '../assets/images/clientes_2.png';
+import calderasImg from '../assets/images/projects/calderas_pro.png';
+import enfriadorasImg from '../assets/images/projects/enfriadoras_pro.png';
+import cuadrosImg from '../assets/images/projects/cuadros_pro.png';
+---
+
+<section class="py-12 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-start justify-between gap-16">
+      
+      <!-- Left: Title and Stats -->
+      <div class="lg:w-1/3 text-center lg:text-left lg:sticky lg:top-32">
+        <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Trayectoria Garantizada</h2>
+        <h3 class="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight text-balance">Grandes proyectos que avalan nuestra ingeniería.</h3>
+        <p class="text-gray-500 text-lg mb-8">Más de dos décadas ejecutando instalaciones críticas en los edificios más emblemáticos de España.</p>
+        
+        <div class="flex items-center justify-center lg:justify-start gap-8">
+          <div>
+            <span class="block text-4xl font-bold text-primary">+20</span>
+            <span class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Años de Exp.</span>
+          </div>
+          <div class="w-px h-12 bg-gray-100"></div>
+          <div>
+            <span class="block text-4xl font-bold text-primary">500+</span>
+            <span class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Proyectos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Project Showcase -->
+      <div class="lg:w-2/3 w-full">
+        <!-- Visual Gallery -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <div class="group relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+            <Image src={calderasImg} alt="Salas de Calderas" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000" />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+              <span class="text-white font-bold text-xs uppercase tracking-widest">Salas de Calderas</span>
+            </div>
+          </div>
+          <div class="group relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+            <Image src={enfriadorasImg} alt="Plantas Enfriadoras" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000" />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+              <span class="text-white font-bold text-xs uppercase tracking-widest">Plantas Enfriadoras</span>
+            </div>
+          </div>
+          <div class="group relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+            <Image src={cuadrosImg} alt="Cuadros de Control" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000" />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+              <span class="text-white font-bold text-xs uppercase tracking-widest">Cuadros de Control</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project List Grid -->
+        <div class="bg-slate-50 rounded-[3rem] p-8 md:p-12 border border-gray-100 relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[3rem]"></div>
+          
+          <div class="relative z-10">
+            <h4 class="text-secondary font-bold text-lg mb-8 border-b border-gray-200 pb-4">Obras y Proyectos Destacados</h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+              <!-- Categoría: Salud -->
+              <div>
+                <h5 class="text-primary font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Centros Sanitarios
+                </h5>
+                <ul class="space-y-2 text-sm text-gray-600 font-medium">
+                  <li>Hospital General (Gran Canaria)</li>
+                  <li>Hospital Universitario (Tenerife)</li>
+                  <li>Hospital Puerta de Hierro (Majadahonda)</li>
+                  <li>Hospital del Norte (S.S. Reyes)</li>
+                  <li>Hospital de Torrejón de Ardoz</li>
+                  <li>Nuevo Hospital de Móstoles</li>
+                  <li>Hospital de Salamanca</li>
+                </ul>
+              </div>
+
+              <!-- Categoría: Hoteles -->
+              <div>
+                <h5 class="text-primary font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Hostelería de Lujo
+                </h5>
+                <ul class="space-y-2 text-sm text-gray-600 font-medium">
+                  <li>Hotel JW (Madrid)</li>
+                  <li>Hotel Villa Magna (Madrid)</li>
+                  <li>Hotel Puente Romano (Marbella)</li>
+                  <li>Hotel Los Monteros (Marbella)</li>
+                  <li>Hotel Costa Adeje (Tenerife)</li>
+                  <li>Hotel Bahía Príncipe (Tenerife)</li>
+                  <li>Hotel Princess (Fuerteventura)</li>
+                  <li>Hotel Barceló (Palma)</li>
+                  <li>Hotel Novotel – Pullman (Madrid)</li>
+                </ul>
+              </div>
+
+              <!-- Categoría: Corporativo / Torres -->
+              <div>
+                <h5 class="text-primary font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Edificios Emblemáticos
+                </h5>
+                <ul class="space-y-2 text-sm text-gray-600 font-medium">
+                  <li>Torre Caleido (Madrid)</li>
+                  <li>Torre de Cristal (Madrid)</li>
+                  <li>Torre Madrid</li>
+                  <li>Torre Titania (Nuevo Windsor)</li>
+                  <li>Torres Porta Fira (Hospitalet)</li>
+                  <li>Edificios Telefónica (Varios)</li>
+                  <li>Campus Airbus / Iberdrola</li>
+                  <li>Laboratorio Sanofi-Aventis</li>
+                  <li>Edificio Foresta Las Tablas</li>
+                </ul>
+              </div>
+
+              <!-- Categoría: Infraestructura / Centros -->
+              <div>
+                <h5 class="text-primary font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <div class="w-1.5 h-1.5 rounded-full bg-primary"></div> Infraestructura y Comercio
+                </h5>
+                <ul class="space-y-2 text-sm text-gray-600 font-medium">
+                  <li>Terminal T-4 Barajas</li>
+                  <li>C. Deportiva Real Madrid</li>
+                  <li>C.C. Plaza Norte 2</li>
+                  <li>C.C. Interikea Valladolid</li>
+                  <li>C.C. Loranca</li>
+                  <li>CPD Telefónica / BBV / Alcobendas</li>
+                  <li>Palacio de Congresos (Palma)</li>
+                  <li>Centro Penitenciario Campos del Río</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-12 text-center text-[10px] text-gray-400 font-medium tracking-[0.2em] uppercase">
+            Garantía de ejecución en proyectos de alta complejidad técnica
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #00247D;
+    border-radius: 10px;
+  }
+</style>

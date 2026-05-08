@@ -1,0 +1,67 @@
+---
+const features = [
+  {
+    title: "Equipo Técnico Propio",
+    description: "Contamos con ingenieros y técnicos cualificados en plantilla, garantizando la máxima responsabilidad y conocimiento en cada intervención.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+  },
+  {
+    title: "Garantía de Solvencia",
+    description: "Más de dos décadas ejecutando proyectos de alta complejidad técnica avalan nuestra capacidad operativa y financiera.",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+  },
+  {
+    title: "Compromiso 24/7",
+    description: "Entendemos la criticidad de sus instalaciones. Ofrecemos soporte técnico ininterrumpido para asegurar su continuidad de negocio.",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+  },
+  {
+    title: "Ingeniería de Vanguardia",
+    description: "Aplicamos las últimas innovaciones en eficiencia energética y sistemas inteligentes de control industrial.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z"
+  }
+];
+---
+
+<section class="py-12 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-20">
+      <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Valor Diferencial</h2>
+      <h3 class="text-4xl md:text-5xl font-bold text-secondary mb-6">¿Por qué elegirnos?</h3>
+      <div class="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map((feature) => (
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 hover:border-primary/20">
+          <div class="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={feature.icon} />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">{feature.title}</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 bg-primary rounded-[3rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl shadow-primary/20 relative overflow-hidden">
+      <!-- Decoration -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0 100 L100 0 L100 100 Z" fill="white" />
+        </svg>
+      </div>
+      
+      <div class="relative z-10 text-center md:text-left">
+        <p class="text-white/80 font-bold uppercase tracking-widest text-xs mb-2">Más de 20 años de liderazgo</p>
+        <h4 class="text-2xl md:text-3xl font-bold text-white leading-tight">¿Hablamos sobre su próximo proyecto?</h4>
+      </div>
+      <div class="relative z-10">
+        <a href="/contacto" class="inline-flex items-center justify-center px-10 py-5 bg-white text-primary font-bold rounded-full hover:bg-secondary hover:text-white transition-all duration-300 shadow-xl">
+          Solicitar Estudio Técnico
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

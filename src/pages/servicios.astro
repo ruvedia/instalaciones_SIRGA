@@ -1,0 +1,33 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Servicios from '../components/Servicios.astro';
+import { config } from '../data/config';
+---
+
+<MainLayout 
+  title={`Instalaciones y Mantenimiento en ${config.contact.city} | ${config.clinicName}`} 
+  description={`Conoce todos nuestros servicios de instalaciones de climatización, hidráulicas y mantenimiento 24/7 en ${config.contact.city}.`}>
+  
+  <div class="pt-32 sm:pt-40 pb-12 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Nuestros Servicios</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Explora todo lo que Instalaciones Sirga SL puede ofrecer. Gracias a nuestra experiencia, calidad y personal cualificado, trabajamos para empresas líderes y particulares.
+      </p>
+    </div>
+  </div>
+
+  <Servicios />
+  
+  <section class="bg-white py-24 text-center border-t border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight truncate-text">¿Necesitas un presupuesto a medida?</h2>
+      <p class="mb-10 text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
+        Ponte en contacto con nuestro equipo y evaluaremos tus necesidades sin compromiso.
+      </p>
+      <a href="/contacto" class="inline-block px-12 py-5 bg-primary text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95">
+        Contactar Ahora
+      </a>
+    </div>
+  </section>
+</MainLayout>

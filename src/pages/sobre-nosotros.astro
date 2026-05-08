@@ -1,0 +1,54 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import InfoClinic from '../components/InfoClinic.astro';
+import { config } from '../data/config';
+
+const proyectos = [
+  "Terminal T-4, Barajas",
+  "Parador Nacional de la Granja",
+  "Torre de Cristal",
+  "Teatro Coslada",
+  "C.C. Plaza Norte 2",
+  "Hospital Puerta de Hierro",
+  "Edificio Telefónica Las Tablas",
+  "Torre Caleido",
+  "Campus Iberdrola"
+];
+---
+
+<MainLayout 
+  title={`Sobre Nosotros | Obras Realizadas | ${config.clinicName}`} 
+  description={`Conoce nuestra trayectoria de más de 20 años en instalaciones y mantenimiento, con delegación en Canarias y servicio en todo el territorio.`}>
+  
+  <div class="pt-32 sm:pt-40 pb-6 bg-slate-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Nuestros Clientes</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Trabajamos para las primeras empresas del sector, constructoras, organismos públicos y particulares en toda la Península, Portugal y Canarias.
+      </p>
+    </div>
+  </div>
+
+  <InfoClinic />
+  
+  <section id="proyectos" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Obras Destacadas</h2>
+        <p class="text-gray-600 text-lg">Una pequeña muestra de las instalaciones ejecutadas a lo largo de nuestros más de 20 años de historia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {proyectos.map((item) => (
+          <div class="bg-slate-50 p-6 rounded-[2rem] border border-gray-100 flex items-center justify-center text-center hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1">
+            <h3 class="text-lg font-bold text-secondary">{item}</h3>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-16 text-center">
+        <p class="text-sm text-gray-500 italic">* Y muchos más proyectos en hospitales, hoteles, residencias y centros penitenciarios de todo el país.</p>
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,21 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import HeroSelector from '../components/HeroSelector.astro';
+import Servicios from '../components/Servicios.astro';
+import WhyUs from '../components/WhyUs.astro';
+import InfoClinic from '../components/InfoClinic.astro';
+import Clients from '../components/Clients.astro';
+import Process from '../components/Process.astro';
+import Contact from '../components/Contact.astro';
+import { config } from '../data/config';
+---
+
+<MainLayout title={`Instalaciones y Mantenimiento en ${config.contact.city} | ${config.clinicName}`} description={`Empresa instaladora y mantenedora autorizada en ${config.contact.city}. ${config.description}`}>
+  <HeroSelector />
+  <Servicios />
+  <WhyUs />
+  <Clients />
+  <InfoClinic />
+  <Process />
+  <Contact />
+</MainLayout>

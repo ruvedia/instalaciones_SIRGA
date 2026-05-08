@@ -1,0 +1,151 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import Analytics from '../components/Analytics.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import HeaderSelector from '../components/HeaderSelector.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import { config } from '../data/config';
+
+/**
+ * 🎓 EXPLICACIÓN DE PROPS EN ASTRO:
+ * Las 'Props' son los parámetros (o argumentos) que este layout espera recibir de las páginas que lousan.
+ * 'title' y 'description' son opcionales (marcadas con '?'). 
+ * Astro.props extrae esos valores para inyectarlos dinámicamente en el HTML.
+ */
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+// Extraemos las Props. Si la página no nos pasa una 'description', usamos la del archivo config por defecto.
+const { title, description = config.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth" style="color-scheme: light;">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <SEO title={title} description={description} />
+    <Analytics />
+  </head>
+  <body class="flex flex-col min-h-dvh">
+    <!-- Header Dinámico -->
+    <HeaderSelector />
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer Profesional -->
+    <footer class="bg-secondary text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <!-- Brand -->
+          <div class="col-span-1 md:col-span-1">
+            <a href="/" class="flex items-center gap-2 mb-6 group">
+              <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-heading font-bold text-lg group-hover:scale-110 transition-transform">
+                {config.clinicName.substring(0,2).toUpperCase()}
+              </div>
+              <span class="font-heading font-bold text-xl text-white">{config.clinicName}</span>
+            </a>
+            <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+              {config.description}
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div class="col-span-1">
+            <h3 class="font-heading font-semibold text-lg mb-6 text-white border-b border-white/10 pb-2">Empresa</h3>
+            <ul class="space-y-4 text-sm text-gray-300">
+              <li><a href="/sobre-nosotros" class="hover:text-primary transition-colors">Sobre Nosotros</a></li>
+              <li><a href="/servicios" class="hover:text-primary transition-colors">Nuestros Servicios</a></li>
+              <li><a href="/sobre-nosotros#proyectos" class="hover:text-primary transition-colors">Obras Realizadas</a></li>
+              <li><a href="/contacto" class="hover:text-primary transition-colors">Solicitar Presupuesto</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact info -->
+          <div class="col-span-1">
+            <h3 class="font-heading font-semibold text-lg mb-6 text-white border-b border-white/10 pb-2">Contacto</h3>
+            <ul class="space-y-4 text-sm text-gray-300">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span>{config.contact.address}</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 111.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <a href={`tel:${config.contact.phone.replace(/\s+/g, '')}`} class="hover:text-accent transition-colors">{config.contact.phone}</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Schedule -->
+          <div class="col-span-1">
+            <h3 class="font-heading font-semibold text-lg mb-6 text-white border-b border-white/10 pb-2">Horario</h3>
+            <ul class="space-y-3 text-sm text-gray-300">
+              {config.schedule.map((item, index) => (
+                <li class={`flex justify-between ${index !== config.schedule.length - 1 ? 'border-b border-white/5 pb-2' : 'pt-1'}`}>
+                  <span>{item.day}</span>
+                  <span class={`font-medium ${item.closed ? 'text-accent' : item.highlight ? 'text-green-300' : 'text-white'}`}>{item.hours}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} {config.clinicName}. CIF: {config.cif}. Todos los derechos reservados.
+          </p>
+          <div class="flex flex-wrap gap-4 text-sm mt-4 md:mt-0">
+            <a href="/aviso-legal" class="text-gray-400 hover:text-white transition-colors">Aviso Legal</a>
+            <a href="/politica-de-privacidad" class="text-gray-400 hover:text-white transition-colors">Política de Privacidad</a>
+            <a href="/politica-de-cookies" class="text-gray-400 hover:text-white transition-colors">Política de Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <FloatingButtons />
+    <CookieBanner />
+  </body>
+</html>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 1. Lógica del Smart Header (Ocultar al bajar, mostrar al subir)
+  const header = document.querySelector(".js-header");
+  
+  if (header) {
+    const showAnim = gsap.from(header, { 
+      yPercent: -150,
+      paused: true,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+
+    ScrollTrigger.create({
+      start: "top top",
+      onUpdate: (self) => {
+        if (self.direction === -1) {
+          showAnim.play();
+        } else {
+          showAnim.reverse();
+        }
+      }
+    });
+
+    // Reset al volver arriba
+    window.addEventListener('scroll', () => {
+      if (window.scrollY === 0) showAnim.play();
+    });
+  }
+</script>

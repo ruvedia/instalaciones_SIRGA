@@ -1,0 +1,159 @@
+---
+import { Image } from 'astro:assets';
+import climaImg from '../assets/images/services/climatizacion.png';
+import mantImg from '../assets/images/services/mantenimiento.png';
+import hidraImg from '../assets/images/services/hidraulica.png';
+import maintBgImg from '../assets/images/mantenimiento_3.png';
+
+const mainServices = [
+  {
+    title: "Instalaciones de Climatización",
+    description: "Sistemas avanzados de aire acondicionado, calefacción y ventilación con máxima eficiencia energética.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    image: climaImg
+  },
+  {
+    title: "Mantenimiento 24/7",
+    description: "Servicio técnico ininterrumpido para garantizar la operatividad de sus instalaciones críticas.",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    image: mantImg
+  },
+  {
+    title: "Instalaciones Hidráulicas",
+    description: "Redes de fontanería, fluidos industriales y sistemas de protección contra incendios de alta precisión.",
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+    image: hidraImg
+  }
+];
+---
+<section id="servicios" class="pt-4 pb-12 bg-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Servicios Especializados</h2>
+      <h3 class="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight">Soluciones de Ingeniería a su medida</h3>
+      <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+      {mainServices.map((service) => (
+        <div class="js-service-card group relative h-[500px] flex flex-col justify-end p-10 rounded-[3rem] overflow-hidden shadow-2xl hover:-translate-y-2 transition-all duration-500 bg-secondary">
+          <!-- Image Layer -->
+          <div class="absolute inset-0 z-0">
+            <Image 
+              src={service.image} 
+              alt={service.title} 
+              class="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700 group-hover:scale-110" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent"></div>
+          </div>
+
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center mb-6 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon} />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4 leading-tight">{service.title}</h3>
+            <p class="text-gray-300 leading-relaxed text-base">
+              {service.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Mantenimiento Industrial Sobrio -->
+    <div class="mt-32 p-8 md:p-16 bg-slate-50/80 rounded-[3rem] border border-gray-200/50 shadow-sm relative overflow-hidden">
+      
+      <!-- Background Image Layer (Mejorado) -->
+      <div class="absolute inset-0 z-0">
+        <Image 
+          src={maintBgImg} 
+          alt="Mantenimiento Industrial" 
+          class="w-full h-full object-cover opacity-20 mix-blend-luminosity" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-br from-white/90 via-transparent to-primary/5"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-16">
+          <h3 class="text-2xl md:text-4xl font-bold text-secondary leading-tight">
+            Realizamos mantenimiento en instalaciones de:
+          </h3>
+          <div class="w-16 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          {[
+            { label: "Aire Acondicionado", icon: "M3 13h18M3 17h18M3 9h18M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" },
+            { label: "Calefacción", icon: "M8 7V3m4 4V3m4 4V3M7 11h10a2 2 0 012 2v5a2 2 0 01-2 2H7a2 2 0 01-2-2v-5a2 2 0 012-2z" },
+            { label: "A.C.S.", icon: "M12 21s-6-5.686-6-10A6 6 0 0112 5a6 6 0 016 6c0 4.314-6 10-6 10zM12 11a2 2 0 100-4 2 2 0 000 4z" },
+            { label: "Fontanería", icon: "M2 17h5m10 0h5M7 17a5 5 0 005-5V2m0 10a5 5 0 005 5" },
+            { label: "Ventilación", icon: "M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0 M12 12l0 -6 M12 12l5.2 3 M12 12l-5.2 3" },
+            { label: "Instalaciones Industriales", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5" },
+            { label: "Protección contra-incendios", icon: "M12 2L4 5v6.092c0 5.273 3.41 9.934 8 10.908 4.59-0.974 8-5.635 8-10.908V5l-8-3z" },
+            { label: "Gas", icon: "M12 2c0 10 7 12 7 17.5 0 2.485-3.134 4.5-7 4.5s-7-2.015-7-4.5c0-5.5 7-7.5 7-17.5z" },
+            { label: "Electricidad", icon: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" },
+            { label: "Fluidos en general", icon: "M12 2v20M2 12h20" }
+          ].map((item) => (
+            <div class="js-maint-item flex items-center gap-5 p-4 bg-white/40 backdrop-blur-sm rounded-2xl border border-gray-100 hover:border-primary/40 hover:shadow-xl hover:bg-white/90 transition-all duration-300 group">
+              <div class="w-10 h-10 flex-shrink-0 rounded-xl bg-white/80 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={item.icon} />
+                </svg>
+              </div>
+              <span class="font-bold text-secondary text-sm md:text-base group-hover:text-primary transition-colors">{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const cards = document.querySelectorAll(".js-service-card");
+  const maintItems = document.querySelectorAll(".js-maint-item");
+
+  if (cards.length > 0) {
+    gsap.set(cards, { opacity: 0, y: 30 });
+    gsap.to(cards, {
+      scrollTrigger: {
+        trigger: "#servicios",
+        start: "top 85%", 
+        toggleActions: "play none none none",
+      },
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out",
+      clearProps: "all" 
+    });
+  }
+
+  if (maintItems.length > 0) {
+    gsap.set(maintItems, { opacity: 0, x: -30 });
+    gsap.to(maintItems, {
+      scrollTrigger: {
+        trigger: ".js-maint-item",
+        start: "top 92%",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "back.out(1.2)",
+      clearProps: "all"
+    });
+  }
+
+  window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+  });
+</script>
