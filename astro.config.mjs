@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import tailwindcss from '@tailwindcss/vite';
 
 
 
@@ -12,7 +11,7 @@ export default defineConfig({
   site: 'https://instalaciones-sirga.es',
   output: 'static',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: []
   },
 
 
