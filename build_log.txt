@@ -1,0 +1,17 @@
+2026-05-18T21:44:33.539Z astro:cli --verbose flag enabled! Enabling: DEBUG="astro:*,vite:*"
+2026-05-18T21:44:33.539Z astro:cli Tip: Set the DEBUG env variable directly for more control. Example: "DEBUG=astro:*,vite:* astro build".
+Error: ETIMEDOUT: connection timed out, read
+    at Object.readSync (node:fs:734:18)
+    at tryReadSync (node:fs:411:20)
+    at readFileSync (node:fs:457:19)
+    at getSourceSync (node:internal/modules/esm/load:37:14)
+    at defaultLoadSync (node:internal/modules/esm/load:153:34)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:789:12)
+    at #loadSync (node:internal/modules/esm/loader:809:49)
+    at ModuleLoader.load (node:internal/modules/esm/loader:774:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:520:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:565:36) {
+  errno: -60,
+  code: 'ETIMEDOUT',
+  syscall: 'read'
+}

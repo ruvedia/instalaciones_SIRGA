@@ -24,3 +24,5 @@ Thumbs.db
 # Local IDE folders
 .vscode
 .idea
+.vercel
+.env*.local
