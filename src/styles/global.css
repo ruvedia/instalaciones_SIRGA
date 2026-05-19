@@ -15,10 +15,15 @@ html {
 
 @layer base {
   body {
-    @apply font-sans antialiased text-gray-800 bg-white;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #1f2937; /* gray-800 */
+    background-color: #ffffff;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold text-secondary-dark;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: #0F172A; /* secondary-dark */
   }
   
   /* Clases de utilidad para Safari (Glassmorphism) */
