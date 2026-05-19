@@ -10,12 +10,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://instalaciones-sirga.es',
   output: 'static',
+  outDir: './dist/client',
   vite: {
     plugins: []
   },
-
-
-
   integrations: [sitemap()],
   image: {
     domains: ["images.unsplash.com"],

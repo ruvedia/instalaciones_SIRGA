@@ -1,0 +1,67 @@
+Retrieving project…
+Deploying ruvedia/instalaciones-sirga
+Uploading [--------------------] (0.0B/255.9KB)
+Uploading [======--------------] (79.0KB/255.9KB)
+Uploading [==========----------] (138.7KB/255.9KB)
+Uploading [===============-----] (202.9KB/255.9KB)
+Uploading [====================] (255.9KB/255.9KB)
+  Inspect     https://vercel.com/ruvedia/instalaciones-sirga/5nthxUknV9y2XXKv72vUpry2F3j3
+▲ Production  https://instalaciones-sirga-5vtvzipzp-ruvedia.vercel.app
+https://instalaciones-sirga-5vtvzipzp-ruvedia.vercel.appBuilding…
+Building…
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Retrieving list of deployment files...
+Downloading 110 deployment files...
+Restored build cache from previous deployment (C4osbndvApFgr1bZFaZj5CPfjdib)
+Running "vercel build"
+Vercel CLI 53.3.2
+Warning: Detected "engines": { "node": ">=22.12.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version
+Installing dependencies...
+added 6 packages, and removed 37 packages in 7s
+142 packages are looking for funding
+run `npm fund` for details
+Running "npm run build"
+> clinica-fisioterapia@0.0.1 build
+> astro build
+10:16:11 [vite] Re-optimizing dependencies because lockfile has changed
+10:16:12 [types] Generated 450ms
+10:16:12 [build] output: "static"
+10:16:12 [build] mode: "static"
+10:16:12 [build] directory: /vercel/path0/dist/
+10:16:12 [build] Collecting build info...
+10:16:12 [build] ✓ Completed in 469ms.
+10:16:12 [build] Building static entrypoints...
+10:16:14 [vite] ✓ built in 2.17s
+10:16:14 [WARN] [vite] Generated an empty chunk: "HeroBackground.astro_astro_type_script_index_0_lang".
+10:16:14 [WARN] [vite] Generated an empty chunk: "HeroMinimal.astro_astro_type_script_index_0_lang".
+10:16:14 [WARN] [vite] Generated an empty chunk: "HeroSplit.astro_astro_type_script_index_0_lang".
+10:16:14 [vite] ✓ built in 506ms
+10:16:14 [build] Rearranging server assets...
+generating static routes
+10:16:14   ├─ /aviso-legal/index.html (+29ms)
+10:16:14   ├─ /contacto/index.html (+8ms)
+10:16:14   ├─ /politica-de-cookies/index.html (+6ms)
+10:16:14   ├─ /politica-de-privacidad/index.html (+6ms)
+10:16:14   ├─ /servicios/index.html (+9ms)
+10:16:14   ├─ /sobre-nosotros/index.html (+11ms)
+10:16:14   ├─ /index.html (+9ms)
+10:16:14 ✓ Completed in 97ms.
+generating optimized images
+10:16:14   ▶ /_astro/logo.Dr-nC1YU_2ayp6w.webp (before: 11kB, after: 2kB) (+77ms) (1/9)
+10:16:15   ▶ /_astro/climatizacion.IgPwFW6k_Z1Mghj0.webp (before: 840kB, after: 135kB) (+290ms) (2/9)
+10:16:15   ▶ /_astro/mantenimiento.Dj4MmVMH_1ayfNT.webp (before: 880kB, after: 140kB) (+216ms) (3/9)
+10:16:15   ▶ /_astro/mantenimiento_3.lGalagu6_1isasV.webp (before: 273kB, after: 22kB) (+33ms) (4/9)
+10:16:15   ▶ /_astro/hidraulica.DfuSOdLD_Z2jqb3J.webp (before: 898kB, after: 149kB) (+243ms) (5/9)
+10:16:15   ▶ /_astro/equipo_pro.DeejKhVq_Z14SNCy.webp (before: 960kB, after: 175kB) (+230ms) (6/9)
+10:16:15   ▶ /_astro/calderas_pro.wIPIh95W_Z2qgHoj.webp (before: 972kB, after: 195kB) (+289ms) (7/9)
+10:16:15   ▶ /_astro/enfriadoras_pro.Ck6Kuwp6_2vNm0q.webp (before: 868kB, after: 145kB) (+352ms) (8/9)
+10:16:15   ▶ /_astro/cuadros_pro.aWg-f0iQ_1Cp8sC.webp (before: 786kB, after: 105kB) (+154ms) (9/9)
+10:16:15 ✓ Completed in 983ms.
+10:16:15 [build] ✓ Completed in 3.83s.
+10:16:15 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+10:16:15 [build] 7 page(s) built in 4.31s
+10:16:15 [build] Complete!
+Error: No Output Directory named "client" found after the Build completed. Configure the Output Directory in your Project Settings. Alternatively, configure vercel.json#outputDirectory.
+Learn More: https://vercel.link/missing-public-directory
+Error: No Output Directory named "client" found after the Build completed. Configure the Output Directory in your Project Settings. Alternatively, configure vercel.json#outputDirectory.

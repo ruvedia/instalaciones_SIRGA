@@ -1,0 +1,74 @@
+Retrieving project…
+Deploying ruvedia/instalaciones-sirga
+Uploading [--------------------] (0.0B/3.9KB)
+Uploading [====================] (3.9KB/3.9KB)
+  Inspect     https://vercel.com/ruvedia/instalaciones-sirga/FeKmYTCHFNLfTvFPQ3YgTg5BTuqJ
+▲ Production  https://instalaciones-sirga-i4vx8rgr5-ruvedia.vercel.app
+https://instalaciones-sirga-i4vx8rgr5-ruvedia.vercel.appBuilding…
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Retrieving list of deployment files...
+Retrieving list of deployment files...
+Downloading 112 deployment files...
+Restored build cache from previous deployment (C4osbndvApFgr1bZFaZj5CPfjdib)
+Running "vercel build"
+Vercel CLI 53.3.2
+Warning: Detected "engines": { "node": ">=22.12.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version
+Installing dependencies...
+added 6 packages, and removed 37 packages in 8s
+142 packages are looking for funding
+run `npm fund` for details
+Running "npm run build"
+> clinica-fisioterapia@0.0.1 build
+> astro build
+10:17:32 [vite] Re-optimizing dependencies because lockfile has changed
+10:17:32 [types] Generated 441ms
+10:17:32 [build] output: "static"
+10:17:32 [build] mode: "static"
+10:17:32 [build] directory: /vercel/path0/dist/
+10:17:32 [build] Collecting build info...
+10:17:32 [build] ✓ Completed in 475ms.
+10:17:32 [build] Building static entrypoints...
+10:17:35 [vite] ✓ built in 2.40s
+10:17:35 [WARN] [vite] Generated an empty chunk: "HeroBackground.astro_astro_type_script_index_0_lang".
+10:17:35 [WARN] [vite] Generated an empty chunk: "HeroMinimal.astro_astro_type_script_index_0_lang".
+10:17:35 [WARN] [vite] Generated an empty chunk: "HeroSplit.astro_astro_type_script_index_0_lang".
+10:17:35 [vite] ✓ built in 643ms
+10:17:35 [build] Rearranging server assets...
+generating static routes
+10:17:35   ├─ /aviso-legal/index.html (+45ms)
+10:17:35   ├─ /contacto/index.html (+88ms)
+10:17:36   ├─ /politica-de-cookies/index.html (+18ms)
+10:17:36   ├─ /politica-de-privacidad/index.html (+6ms)
+10:17:36   ├─ /servicios/index.html (+9ms)
+10:17:36   ├─ /sobre-nosotros/index.html (+9ms)
+10:17:36   ├─ /index.html (+8ms)
+10:17:36 ✓ Completed in 207ms.
+generating optimized images
+10:17:36   ▶ /_astro/logo.Dr-nC1YU_2ayp6w.webp (before: 11kB, after: 2kB) (+87ms) (1/9)
+10:17:36   ▶ /_astro/climatizacion.IgPwFW6k_Z1Mghj0.webp (before: 840kB, after: 135kB) (+270ms) (2/9)
+10:17:36   ▶ /_astro/mantenimiento.Dj4MmVMH_1ayfNT.webp (before: 880kB, after: 140kB) (+218ms) (3/9)
+10:17:36   ▶ /_astro/mantenimiento_3.lGalagu6_1isasV.webp (before: 273kB, after: 22kB) (+32ms) (4/9)
+10:17:36   ▶ /_astro/hidraulica.DfuSOdLD_Z2jqb3J.webp (before: 898kB, after: 149kB) (+220ms) (5/9)
+10:17:36   ▶ /_astro/equipo_pro.DeejKhVq_Z14SNCy.webp (before: 960kB, after: 175kB) (+231ms) (6/9)
+10:17:36   ▶ /_astro/calderas_pro.wIPIh95W_Z2qgHoj.webp (before: 972kB, after: 195kB) (+235ms) (7/9)
+10:17:36   ▶ /_astro/enfriadoras_pro.Ck6Kuwp6_2vNm0q.webp (before: 868kB, after: 145kB) (+212ms) (8/9)
+10:17:36   ▶ /_astro/cuadros_pro.aWg-f0iQ_1Cp8sC.webp (before: 786kB, after: 105kB) (+157ms) (9/9)
+10:17:36 ✓ Completed in 886ms.
+10:17:36 [build] ✓ Completed in 4.21s.
+10:17:36 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+10:17:36 [build] 7 page(s) built in 4.70s
+10:17:36 [build] Complete!
+Build Completed in /vercel/output [14s]
+Deploying outputs...
+Deployment completed
+Creating build cache...
+[2K[1A[2K[G▲ Production  https://instalaciones-sirga-i4vx8rgr5-ruvedia.vercel.app
+Completing…
+▲ Aliased     https://instalaciones-sirga.vercel.app
+
+✓ Ready in 23s
+
+Common next commands:
+- `vercel inspect instalaciones-sirga-i4vx8rgr5-ruvedia.vercel.app --logs`
+- `vercel redeploy instalaciones-sirga-i4vx8rgr5-ruvedia.vercel.app`
